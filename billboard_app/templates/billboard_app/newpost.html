@@ -1,0 +1,8 @@
+
+    <div class="msg_div">
+                    <span class="date"> {{messages.date|date:"d/m/Y"}}</span>
+                    <div class="msg_header">{{ messages.title }}</div>
+                    <div class="msg_text">{{ messages.msg }}</div>
+                    <div class="msg_writer">{{ messages.author }}</div>
+                    <button class="del msg_btn" id="{{ messages.id }}">delete</button>
+    </div>

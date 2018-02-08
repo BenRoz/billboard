@@ -1,0 +1,90 @@
+body{
+    padding:0;
+    margin:0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#billboard_header{
+    font-family: 'Anton', sans-serif;
+    font-size: 40px;
+    align-items: center;
+    margin-top: 20px;
+}
+
+#posts_holder{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.msg_div{
+    border: 3px solid #00b7ef;
+    width: 45%;
+    margin: 20px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    padding-left: 10px;
+}
+.msg_header{
+    font-family: 'Anton', sans-serif;
+    font-size: 30px;
+    Color:#00b7ef;
+
+}
+.date{
+    position: absolute;
+    margin-top: -21px;
+    background-color: white;
+    padding: 5px;
+    font-family: 'Poiret One', cursive;
+    font-size: 16px;
+}
+.msg_text{
+    Font-family: Arial;
+    font-size : 16px;
+    Color:#c1bfc0;
+}
+.del.msg_btn{
+    width: 15%;
+    height: 30px;
+    margin-bottom: 10px;
+    border: 1px dashed #00b7ef;
+    background: #3a918921;
+    border-radius: 15px;
+}
+
+.msg_writer{
+    font-family: 'Pinyon Script', cursive;
+    font-size: 24px;
+    align-self: flex-end;
+    margin: 10px;
+}
+
+.add_msg{
+    border: 1px dashed;
+    width: 45%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    height: 50px;
+}
+.add_msg_btn{
+    font-size: 16px;
+    background: #66CDAA;
+    Radius :3px;
+    height:35px;
+    width: 70px;
+}
+.add_msg_btn,cancel_msg_btn,send_msg_btn:hover{
+    cursor: pointer;
+}
+.ben{
+    color:white;
+}
+#form_section{
+    display: none;
+}

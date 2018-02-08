@@ -1,0 +1,75 @@
+.form{
+    border:3px dashed #00b7ef ;
+    width: 45%;
+    height: auto;
+    margin: 20px;
+}
+.current_date{
+    position: absolute;
+    margin-top: -21px;
+    background-color: white;
+    padding: 5px;
+    font-family: 'Poiret One', cursive;
+    font-size: 16px;
+}
+.form_text{
+    height: 100px;
+    display: block;
+    width:90%;
+    margin: 15px;
+    white-space: pre-line;
+    /*overflow-wrap: break-word;*/
+    /*overflow: auto;*/
+    word-wrap: break-word;
+    text-wrap: normal;
+    /*resize: none;*/
+    /*box-sizing : border-box;*/
+}
+
+.form_header{
+    display: block;
+    margin: 15px;
+}
+.form_author{
+    margin-bottom: 15px;
+    left: 64%;
+    position: relative;
+}
+
+.new_msg_div{
+    border: 1px dashed;
+    width: 45%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    height: 50px;
+}
+.send_msg_btn, .cancel_msg_btn{
+    font-size: 16px;
+    Radius :3px;
+    height:35px;
+    width: 70px;
+    margin: 5px;
+
+}
+.send_msg_btn{
+    background: #66CDAA;
+}
+.cancel_msg_btn{
+    background: red;
+}
+.add_msg_btn:hover{
+    cursor: pointer;
+}
+#form_error{
+    font-size:22px;
+    color: darkred;
+}
+
+#form_section{
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+
+}

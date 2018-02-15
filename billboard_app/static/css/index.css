@@ -88,3 +88,55 @@ body{
 #form_section{
     display: none;
 }
+
+.auth-wrapper{
+    text-align: center;
+    font-size: 16px;
+}
+
+.auth-div {
+    width: 110px;
+    height: 65px;
+    border: 1px dashed lightblue;
+    margin: 10px;
+    line-height: 60px;
+    font-size: 26px;
+}
+.login-and-register{
+    display: flex;
+    justify-content: center;
+}
+
+a{
+    text-decoration: none;
+}
+.user{
+    margin-bottom: 0px;
+}
+#logout-box{
+    width: 60px;
+    height: 25px;
+    border: 1px dashed lightblue;
+    margin-bottom: 15px;
+    line-height: 22px;
+    font-size: 13px;
+}
+
+#login-wrapper{
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    top: 75px;
+    position: relative;
+}
+
+#login_btn{
+    width: 53%;
+    height: 10%;
+}
+
+#sign_in{
+    font-size: 30px;
+    font-weight: bold;
+}

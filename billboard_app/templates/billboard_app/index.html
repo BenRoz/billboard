@@ -14,38 +14,56 @@
 
 </head>
 <body>
+{% block content %}
     <div id="billboard_header">BILLBOARD</div>
-    <div id="posts_holder">
-        {% if messages %}
-            {% for msg in messages %}
-                <div class="msg_div">
-                    <span class="date"> {{msg.date|date:"d/m/Y"}}</span>
-                    <div class="msg_header">{{ msg.title }}</div>
-                    <div class="msg_text">{{ msg.msg }}</div>
-                    <div class="msg_writer">{{ msg.author }}</div>
-                    <button class="del msg_btn" id="{{ msg.id }}">delete</button>
-                </div>
-            {% endfor %}
-        {% else %}
-            <div class="no_msg_div" style="font-size:24px">press + to add new message</div>
-        {% endif %}
-    </div>
-
-    <div class="add_msg">
-       <button class="add_msg_btn"><i class="fas fa-plus ben"></i></button>
-    </div>
-
-    <div id="form_section">
-         <div class="form">
-            <span class="current_date">{{ current_date|date:"d/m/Y" }}</span>
-             <input type="text" class="form_header" placeholder="Title"/>
-             <textarea class="form_text" placeholder="Your massage"></textarea>
-             <input type="text" class="form_author" placeholder="Author"/>
+    {% if user.is_anonymous %}
+          <div class="auth-wrapper">
+            <p class="anonymous-user">{{user}}</p>
+            <div class="login-and-register">
+                <div class="auth-div" id="login-box"><a href="{% url 'login_view' %}">Login</a></div>
+                <div class="auth-div" id="register-box"><a href="{% url 'register' %}">Register</a></div>
+            </div>
+          </div>
+    {% else %}
+        <div class="auth-wrapper">
+          <p class="user">hello {{user}}, welcome back </p>
+          <div class="login-and-register">
+            <div class="auth-div" id="logout-box"><a href="{% url 'login_view' %}">Logout</a></div>
+          </div>
         </div>
-        <div class="new_msg_div">
-            <button class="cancel_msg_btn"><i class="far fa-window-close ben"></i></button>
-            <button class="send_msg_btn" ><i class="fas fa-check ben"></i></button>
+        <div id="posts_holder">
+            {% if messages %}
+                {% for msg in messages %}
+                    <div class="msg_div">
+                        <span class="date"> {{msg.date|date:"d/m/Y"}}</span>
+                        <div class="msg_header">{{ msg.title }}</div>
+                        <div class="msg_text">{{ msg.msg }}</div>
+                        <div class="msg_writer">{{ msg.author }}</div>
+                        <button class="del msg_btn" id="{{ msg.id }}">delete</button>
+                    </div>
+                {% endfor %}
+            {% else %}
+                <div class="no_msg_div" style="font-size:24px">press + to add new message</div>
+            {% endif %}
         </div>
-    </div>
+
+        <div class="add_msg">
+           <button class="add_msg_btn"><i class="fas fa-plus ben"></i></button>
+        </div>
+
+        <div id="form_section">
+             <div class="form">
+                <span class="current_date">{{ current_date|date:"d/m/Y" }}</span>
+                 <input type="text" class="form_header" placeholder="Title"/>
+                 <textarea class="form_text" placeholder="Your massage"></textarea>
+                 <input type="text" class="form_author" placeholder="Author"/>
+            </div>
+            <div class="new_msg_div">
+                <button class="cancel_msg_btn"><i class="far fa-window-close ben"></i></button>
+                <button class="send_msg_btn" ><i class="fas fa-check ben"></i></button>
+            </div>
+        </div>
+    {% endif %}
+{% endblock %}
 </body>
 </html>
